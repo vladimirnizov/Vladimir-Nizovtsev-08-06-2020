@@ -34,7 +34,7 @@ export default {
 			this.isLoading = true
 			
 			if (q) {
-				axios.get('http://dataservice.accuweather.com/locations/v1/cities/autocomplete', {
+				axios.get('https://dataservice.accuweather.com/locations/v1/cities/autocomplete', {
 					mode: 'no-cors',
 					params: {
 						apikey: process.env.API_KEY,

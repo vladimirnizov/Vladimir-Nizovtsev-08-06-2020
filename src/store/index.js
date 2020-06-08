@@ -38,7 +38,7 @@ export default new Vuex.Store({
 	},
 	actions: {
 		async fetch ({ commit, state, dispatch }) {
-			const { data } = await axios.get(`http://dataservice.accuweather.com/currentconditions/v1/${state.cityKey}`, {
+			const { data } = await axios.get(`https://dataservice.accuweather.com/currentconditions/v1/${state.cityKey}`, {
 				params: {
 					apikey: process.env.API_KEY,
 				}
@@ -48,7 +48,7 @@ export default new Vuex.Store({
 			commit('currentCity', data[0])			
 		},
 		async forecasts ({ commit, state }) {
-			const forecasts = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${state.cityKey}`, {
+			const forecasts = await axios.get(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${state.cityKey}`, {
 				params: {
 					apikey: process.env.API_KEY,
 					metric: ! state.fahrenheit

@@ -1,6 +1,7 @@
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
+  publicPath: '/weatherapp/',
   "transpileDependencies": [
     "vuetify"
   ],
